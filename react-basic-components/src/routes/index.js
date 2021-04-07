@@ -3,6 +3,10 @@ import { Switch, Route } from 'react-router-dom';
 
 //Required components
 import ButtonPage  from '../components/button';
+import CheckBoxes from '../components/check-box';
+import Dropdown from '../components/dropdown';
+import Label from '../components/label';
+import RadioButton from '../components/radio-button';
 
 //isPrivate currently has no influence currently but will be used to redirect later based on user permission
 
@@ -17,7 +21,10 @@ export default function Routes() {
     return (
         <Switch>
             <Route path="/" exact component={ButtonPage}/>
-            {/* <Route path='/button' component={ ButtonPage } isPrivate/> */}
+            <Route path='/label' component={Label} isPrivate/>
+            <Route path='/dropdown' component={Dropdown} />
+            <Route path='/checkbox' component={CheckBoxes} />
+            <Route path='/radiobutton' component={RadioButton} />
         </Switch>
     )
 }
