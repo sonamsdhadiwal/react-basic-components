@@ -17,6 +17,7 @@ class ButtonPage extends React.Component {
         this.setState(state => ({
             isToggleOn: !state.isToggleOn
         }));
+        window.open();
     }
 
     render() {
